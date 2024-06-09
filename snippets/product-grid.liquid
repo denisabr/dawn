@@ -1,0 +1,9 @@
+<div class="product-grid">
+    {% for product in collections.frontpage.products %}
+    <div class="product">
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+        <h3>{{ product.title }}</h3>
+        <p>{{ product.price | money }}</p>
+    </div>
+    {% endfor %}
+</div>
